@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 import json
 from django.contrib.auth.models import User
@@ -12,6 +12,7 @@ import random
 import http.client
 from django.contrib.auth import authenticate,logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User, auth
 
 # Create your views here.
 
@@ -72,10 +73,20 @@ def otp_send(request):
     else:
         return False
 
-@login_required
+# @login_required
 def login(request):
-     return render(request, 'authapp/signin.html')
-    # return render(request,'homeapp/price.html')
+    if request.method == 'POST':
+         uname = request.POST['uname']
+         pwd = request.POST['pwd']
+         user = authenticate(username=uname, password=pwd)
+         if user is not None:
+             
+                 return HttpResponse('sucess')
+         else:
+             return HttpResponse('not sucess')
+    else:
+        return render(request, 'authapp/signin.html')
+    #   return render(request,'homeapp/price.html')
 
 def my_logout(request):
     logout(request)

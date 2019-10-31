@@ -13,3 +13,5 @@ class RegForm(forms.ModelForm):
 class LoginForm(forms.ModelForm):
     uname=forms.CharField(max_length=20)
     pwd=forms.CharField(widget=forms.PasswordInput())
+
+    
