@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>otpinput</title>
+</head>
+<body bgcolor="#e9967a">
+<form action="otpvalidation" method="POST">
+    {% csrf_token %}
+    Enter otp:<input type="password" name="otp"><br>
+    <input type="submit" value="send">
+</form>
+</body>
+</html>

@@ -1,0 +1,531 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Hello Properties</title>
+	<!-- bootstrap-css -->
+	<link href="{% static 'css/bootstrap.css' %} " rel="stylesheet" type="text/css" media="all" />
+	<!--// bootstrap-css -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.css' %}">
+	<!-- css -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css" media="all" />
+	<!--// css -->
+	<!-- font-awesome icons -->
+	<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+	<!-- //font-awesome icons -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css" media="all">
+
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header">
+		<div class="main_header">
+			<div class="header_nav">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header navbar-left">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbart">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="{% static 'index.html' %}"><img src="{% static 'images/logo.png' %}" alt="HP"/></a>
+					</div>
+
+					<div class="collapse navbar-collapse navbar-right" id="navbart">
+						<nav class="nav_starts">
+							<ul class="nav navbar-nav">
+								<li><a href="">Home</a></li>
+								<li class="dropdown">
+									<a href="#">Cart <b class="caret"></b></a>
+{#									<ul class="dropdown-menu nav_dropdown">#}
+{#										<li><a href="buyres.html">products</a></li>#}
+{#										<li><a href="buycomm.html"></a></li>#}
+{#									</ul>#}
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tracking <b class="caret"></b></a>
+									<ul class="dropdown-menu nav_dropdown">
+										<li><a href="sample.html">Tracking details</a></li>
+										<li><a href="rentcomm.html">cancel</a></li>
+									</ul>
+								</li>
+{#								<li class="dropdown">#}
+{#									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Lease <b class="caret"></b></a>#}
+{#									<ul class="dropdown-menu nav_dropdown">#}
+{#										<li><a href="leaseres.html">Residential</a></li>#}
+{#										<li><a href="leasecomm.html">Commercial</a></li>#}
+{#									</ul>#}
+{#								</li><li class="dropdown">#}
+{#									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Partners <b class="caret"></b></a>#}
+{#									<ul class="dropdown-menu nav_dropdown">#}
+{#										<li><a href="dealers.html">Dealers</a></li>#}
+{#										<li><a href="builders.html">Builders</a></li>#}
+{#									</ul>#}
+{#								</li>#}
+
+								<li><a href="./signup/">sign up</a></li>
+                                <li><a href="./login/">Log In</a></li>
+								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" ><i class="fa fa-bars fa-1x" aria-hidden="true"></i></a>
+									<ul class="dropdown-menu nav_dropdown">
+										<li><a href="{% static 'profile.html' %}">My Profile</a></li>
+										<li><a href="{% static 'shortlist.html' %}">My Shortlist</a></li>
+										<li><a href="{% static 'sell.html' %}">Sell/Rent Property</a></li>
+										<li><a href="{% static 'news.html' %}">News</a></li>
+										<li><a href="#">Price Trends</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+				    </div>
+				</nav>
+
+				<form action="#" method="post">
+                     <select
+      aria-describedby="searchDropdownDescription"
+      class="nav-search-dropdown searchSelect"
+      data-nav-digest="R0Y6PpUvJhgOTk4cZYLpBnPuc6o="
+      data-nav-selected="0"
+      id="searchDropdownBox"
+      name="url"
+      style="display: block;"
+      tabindex="8"
+      title="Search in"
+    >
+        <option selected="selected" value="search-alias=aps">All Categories</option>
+        <option value="search-alias=alexa-skills">Alexa Skills</option>
+        <option value="search-alias=amazon-devices">Amazon Devices</option>
+        <option value="search-alias=fashion">Amazon Fashion</option>
+        <option value="search-alias=nowstore">Amazon Fresh</option>
+        <option value="search-alias=amazon-global-store">Amazon Global Store</option>
+        <option value="search-alias=pantry">Amazon Pantry</option>
+        <option value="search-alias=appliances">Appliances</option>
+        <option value="search-alias=mobile-apps">Apps & Games</option>
+        <option value="search-alias=baby">Baby</option>
+        <option value="search-alias=beauty">Beauty</option>
+        <option value="search-alias=stripbooks">Books</option>
+        <option value="search-alias=automotive">Car & Motorbike</option>
+        <option value="search-alias=apparel">Clothing & Accessories</option>
+        <option value="search-alias=collectibles">Collectibles</option>
+        <option value="search-alias=computers">Computers & Accessories</option>
+        <option value="search-alias=electronics">Electronics</option>
+        <option value="search-alias=furniture">Furniture</option>
+        <option value="search-alias=lawngarden">Garden & Outdoors</option>
+        <option value="search-alias=gift-cards">Gift Cards</option>
+        <option value="search-alias=grocery">Grocery & Gourmet Foods</option>
+        <option value="search-alias=hpc">Health & Personal Care</option>
+        <option value="search-alias=kitchen">Home & Kitchen</option>
+        <option value="search-alias=industrial">Industrial & Scientific</option>
+        <option value="search-alias=jewelry">Jewellery</option>
+        <option value="search-alias=digital-text">Kindle Store</option>
+        <option value="search-alias=luggage">Luggage & Bags</option>
+        <option value="search-alias=luxury-beauty">Luxury Beauty</option>
+        <option value="search-alias=dvd">Movies & TV Shows</option>
+        <option value="search-alias=popular">Music</option>
+        <option value="search-alias=mi">Musical Instruments</option>
+        <option value="search-alias=office-products">Office Products</option>
+        <option value="search-alias=pets">Pet Supplies</option>
+        <option value="search-alias=instant-video">Prime Video</option>
+        <option value="search-alias=shoes">Shoes & Handbags</option>
+        <option value="search-alias=software">Software</option>
+        <option value="search-alias=sporting">Sports, Fitness & Outdoors</option>
+        <option value="search-alias=home-improvement">Tools & Home Improvement</option>
+        <option value="search-alias=toys">Toys & Games</option>
+        <option value="search-alias=videogames">Video Games</option>
+        <option value="search-alias=watches">Watches</option>
+    </select>
+					<input type="text" placeholder="Search....">
+					<input type="submit" value="Search">
+				</form>
+			</div>
+            <ul class="slider">
+              <li>
+                <figure class="slide" style="background-image: url({% static 'images/slider4.jpg' %})">
+                  <figcaption>"MAKE A HELLO <i class="fa fa-phone fa-1x"></i>TO CHANGE YOUR LIVING STYLE"</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="slide" style="background-image: url({% static 'images/image5.jpg' %})">
+                  <figcaption>"MAKE A HELLO <i class="fa fa-phone fa-1x"></i>TO CHANGE YOUR LIVING STYLE"</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure class="slide" style="background-image: url({% static 'images/image4.jpg' %})">
+                  <figcaption>"MAKE A HELLO <i class="fa fa-phone fa-1x"></i> TO CHANGE YOUR LIVING STYLE"</figcaption>
+                </figure>
+              </li>
+            </ul>
+		</div>
+	</div>
+	<!--//header-->
+
+	<!-- find property -->
+    <div class="container-fluid">
+        <div class="row" id="row2">
+            <div id="heading">
+                <h1><b>Find a Property</b></h1><br/>
+                <h3>We ensure you to find your dream property by connecting<br/><br/> with us</h3>
+            </div>
+            <br/>
+	        <form action="">
+                <div class="col-lg-12">
+                    <div class="col-lg-1"></div>
+	                <div class="col-lg-3">
+					   <h4 class="h4_style">Any Type</h4>
+					    <select name="" class="select">
+							<option value="0">--Select--</option>
+                            <option value="1"> Residential Apartments </option>
+                            <option value="2"> Residential Land </option>
+                            <option value="3"> Independent House/Villa </option>
+                            <option value="4"> Independent/Builder Floor </option>
+                            <option value="5"> serviced Apartments  </option>
+                            <option value="6"> Farm House </option>
+                            <option value="7"> Studio Apartment </option>
+                            <option value="8"> Commercial Shop </option>
+                            <option value="9"> Commercial Land </option>
+                            <option value="10"> Commercial Showroom  </option>
+                            <option value="11"> Commercial Office </option>
+                            <option value="12"> Cold Storage </option>
+                            <option value="13"> Guest House </option>
+                            <option value="14"> Hotels/Resorts </option>
+                            <option value="15"> Industrial Land </option>
+                            <option value="16"> Agricultural Land </option>
+                            <option value="17"> Office in It Park </option>
+                            <option value="18"> Office in Bussiness Park </option>
+                            <option value="19"> Space in Retail mall </option>
+                            <option value="20"> Factory </option>
+                            <option value="21"> Others </option>
+						</select>
+                    </div>
+                    <div class="col-lg-3 space">
+                        <h4 class="h4_style">Availability</h4>
+						<select name="">
+                            <option value="">--select--</option>
+                            <option value="">Ready to Move</option>
+                            <option value="">Under Construction</option>
+                        </select>
+					</div>
+				    <div class="col-lg-3 space">
+                        <h4 class="h4_style">Any Location</h4>
+						<select name="" class="scroll">
+								<option>--select--</option>
+								<option value="">Delhi</option>
+								<option value="">Guragon</option>
+								<option value="">Nodia</option>
+								<option value="">Greater Nodia</option>
+                                <option value="">Ghaziabad</option>
+								<option value="">Faridhabad</option>
+								<option value="">Bhadurghad</option>
+								<option value="">Dharuheda</option>
+                                <option value="">Bhinadi</option>
+								<option value="">Jaipur</option>
+								<option value="">Udaipur</option>
+								<option value="">Chandigarh</option>
+                                <option value="">Indore</option>
+								<option value="">Ahmedabad</option>
+								<option value="">Bhopal</option>
+								<option value="">Nagpur</option>
+                                <option value="">Mumbai</option>
+                                <option value="">Chhattisgarh</option>
+								<option value="">Pune</option>
+								<option value="">Thane</option>
+								<option value="">Vijayawada</option>
+                                <option value="">Coimbatore</option>
+								<option value="">Chennai</option>
+								<option value="">Hyderabad</option>
+								<option value="">Banglore</option>
+								<option value="">Mangalore</option>
+                                <option value="">Kochi</option>
+								<option value=""> Trivandrum</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-3">
+                        <h4 class="h4_style">Property for Any</h4>
+                        <select>
+                            <option value="">--select--</option>
+                            <option value="">For Sale</option>
+                            <option value="">For Rent</option>
+                            <option value="">For Lease</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 space">
+                        <span>
+                            <h4 class="h4_style">Price Range</h4>
+                        </span>
+                        <div id="slider-range"></div>
+				        <input type="text" id="amount" readonly>
+				    </div>
+                    <div class="col-lg-3 space abc">
+                        <input type="submit" id="x" class="btn btn-primary" value="Find Properties">
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+	       </form>
+	   </div>
+	</div>
+	<!-- //find property -->
+
+	<!-- latest properties-->
+	<div class="container-fluid">
+        <div class="row" id="row3">
+            <h1>Latest Properties</h1>
+            <p id="p1">Some amazing features of Hello Properties</p><br/>
+            <div class="col-lg-12">
+                <div class="col-lg-4 effect">
+                   <div class="img_plc">
+                        <div class="hover">
+                             <figure><img src="{% static 'images/img5.jpg' %}" alt=" " class="img-responsive"></figure>
+                        </div>
+                    </div>
+                    <h4>2 Bedroom House For Rent</h4>
+                    <p>For sale in Society: Rv Kaustuba for sale in Gardenia Grove Villas, Srisailam Highway,<br/> Hyderabad</p>
+                    <ul>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li>(543)</li>
+                    </ul><br/>
+                    <a href="buyhome1.html" class="btn btn-primary">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-lg-4 effect">
+                    <div class="img_plc">
+                        <div class="hover">
+                             <figure><img src="{% static 'images/img2.jpg' %}" alt=" " class="img-responsive"></figure>
+                        </div>
+                    </div>
+                    <h4>High Rise Buildings For Rent</h4>
+                    <p>For sale in Society: Rv Kaustuba for sale in Gardenia Grove Villas, Srisailam Highway,<br/> Hyderabad</p>
+                    <ul>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li>(854)</li>
+                    </ul><br/>
+                    <a href="buyhome1.html" class="btn btn-primary">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				</div>
+                <div class="col-lg-4 effect">
+					<div class="img_plc">
+                        <div class="hover">
+                             <figure><img src="{% static 'images/img4.jpg' %}" alt=" " class="img-responsive"></figure>
+                        </div>
+                    </div>
+                    <h4>Big Luxury House For Rent</h4>
+                    <p>For sale in Society: Rv Kaustuba for sale in Gardenia Grove Villas, Srisailam Highway,<br/> Hyderabad</p>
+                    <ul>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-half-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                        <li>(543)</li>
+                    </ul><br/>
+                    <a href="buyhome1.html" class="btn btn-primary">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+				</div>
+            </div>
+	   </div>
+    </div>
+	<!-- //latest properties -->
+
+	<!-- most popular properties -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="mostPop row4">
+                <h3>Most Popular Properties</h3><br/>
+                <p>Properties In Most Popular</p><br/>
+                <div class="col-lg-12">
+                    <div class="col-lg-2"></div>
+                    <div class="cont1">
+                        <div class="col-lg-2">
+                            <a href="leasehome1.html">
+                                <img src="{% static 'images/i1.jpg' %}"  alt="Avatar" class="image1">
+                                <div id="overlay1">
+                                    <div class="text">For Lease</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="cont2">
+                            <a href="renthome1.html">
+                                <img src="{% static 'images/i2.jpg' %}"  class="image2">
+                                <div id="overlay2">
+                                    <div class="text">For Rent</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cont21">
+                            <a href="buyhome1.html">
+                                <img src="{% static 'images/i3.jpg' %}"  class="image21">
+                                <div id="overlay21">
+                                    <div class="text">For Sale</div>
+                                </div>
+                            </a>
+                        </div>
+                   </div>
+                   <div class="col-lg-2">
+                        <div class="cont3">
+                            <a href="leasehome1.html">
+                                <img src="{% static 'images/i4.jpg' %}" class="image3">
+                                <div id="overlay3">
+                                    <div class="text">For Lease</div>
+                                </div>
+                            </a>
+                        </div>
+                   </div>
+                   <div class="col-lg-2">
+                        <div class="cont4">
+                            <a href="renthome1.html">
+                                <img src="{% static 'images/i5.jpg' %}"  class="image4">
+                                <div id="overlay4">
+                                    <div class="text">For Rent</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="cont41">
+                            <a href="buyhome1.html">
+                                <img src="{% static 'images/i6.jpg' %}"  class="image41">
+                                <div id="overlay41">
+                                    <div class="text">For Sale</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- //most popular properties -->
+
+    <!-- /testimonials-->
+	<div class="testimonials">
+        <h3 class="main_heading">Testimonials</h3>
+        <div id="owl-demo" class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="content">
+                    <div class="midd">
+                        <p class="pp1"><i class="fa fa-quote-left" aria-hidden="true"></i> I moved to Mumbai from Delhi early this year and i looked online for a suitable apartment for rent in areas near my work place in Andheri
+                            Thanks Hello Properties for giving me so many options with Travel Time Search </p>
+                        <img class="agile-img" src="{% static 'images/t1.png' %}" alt=" " class="img-responsive">
+                        <h4>Srinivas</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <div class="midd">
+                        <p class="pp1"><i class="fa fa-quote-left" aria-hidden="true"></i>  I moved to Mumbai from Delhi early this year and i looked online for a suitable apartment for rent in areas near my work place in Andheri
+                            Thanks Hello Properties for giving me so many options with Travel Time Search </p>
+                        <img class="agile-img" src="{% static 'images/t2.png' %}" alt=" " class="img-responsive">
+                        <h4>Preethi</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <div class="midd">
+                        <p class="pp1"><i class="fa fa-quote-left" aria-hidden="true"></i>  I moved to Mumbai from Delhi early this year and i looked online for a suitable apartment for rent in areas near my work place in Andheri
+                            Thanks Hello Properties for giving me so many options with Travel Time Search 	</p>
+                        <img class="agile-img" src="{% static 'images/t3.png' %}" alt=" " class="img-responsive">
+                        <h4>Ravi Kiran</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+	</div>
+    <div class="clearfix"> </div>
+	<!-- //testimonials-->
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<h2><a href="index.html">Hello Properties</a></h2>
+			<h3>Subscribe To Our Newsletter</h3>
+			<p class="footer_paragraph">Subscribe to our newsletter and we will inform you about newest projects and promotions.</p>
+			<form action="#" method="post">
+				<input type="email" name="email" placeholder="Your email..." required="">
+				<input type="submit" value="Subscribe">
+			</form>
+			<div class="footer_nav">
+				<div class="footer_nav_left">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+						<li><a href="news.html">News</a></li>
+					</ul>
+				</div>
+				<div class="footer_nav_right">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<p>© 2018 Hello Properties. All rights reserved | Design by <a href="#">Epitychis Info Labs Pvt.Ltd</a></p>
+		</div>
+	</div>
+	<!-- //footer -->
+
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+	<!-- start-smooth-scrolling -->
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smooth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+
+	<script type="text/javascript" src="{% static 'js/jquery-ui.js' %}"></script>
+	<!-- carousel -->
+	<script src="{% static 'js/owl.carousel.js' %}"></script>
+	<script src="{% static 'js/testimonials-slider.js' %}"></script>
+	<!-- //carousel -->
+	
+    <!-- range_slider -->
+    <script src="{% static 'js/range-slide.js' %}"></script>
+    <!-- //range_slider -->
+    
+    <!-- font_icons -->
+    <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js' %}" type="text/javascript"></script>
+    <!-- //font_icons -->
+    
+    <!-- slider -->
+    <script src="{% static 'js/mainpage-slider.js' %}"></script>
+    <!-- //slider -->
+
+</body>
+</html>
