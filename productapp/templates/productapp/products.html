@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <body bgcolor="grey"> -->
+    <table border="2">
+    	<tr>
+    		<th>pid </th>
+            <th>pcat </th>
+            <th>pname</th>            
+    		<th>pcost</th>
+    		<th>pmfdt</th>
+    		<th>pexpt</th>
+    	</tr>
+
+    	{% for ref in resc %}
+        
+    	<tr>
+    		<td>{{ ref.pid   }}</td>
+            <td>{{ ref.pcat  }}</td>
+            <td>{{ ref.pname }}</td>    		
+    		<td>{{ ref.pcost }}</td>
+    		<td>{{ ref.pmfdt }}</td>
+    		<td>{{ ref.pexpt }}</td>
+    	</tr>
+
+        {% endfor %}
+
+    </table>
+</body>
+</html>

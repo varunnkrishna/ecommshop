@@ -6,10 +6,10 @@ from .models import Product, Stock
 
 
 class Productadmin(admin.ModelAdmin):
-	list_display = ['pid', 'pname', 'pcat', 'pcost', 'pmfdt','pexpt']
+	list_display = ['pid', 'pcat', 'pname', 'pcost', 'pmfdt','pexpt']
 	list_filter = ['pcat', 'pmfdt', 'pexpt']
 
-	class Meta:
+	class meta:
 		model = Product
         
 admin.site.register(Product, Productadmin)

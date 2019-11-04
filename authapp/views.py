@@ -13,6 +13,7 @@ import http.client
 from django.contrib.auth import authenticate,logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, auth
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -79,9 +80,10 @@ def login(request):
          uname = request.POST['uname']
          pwd = request.POST['pwd']
          user = authenticate(username=uname, password=pwd)
-         if user is not None:
-             
+         if user is not None: 
+                #  send_useremail(request)            
                  return HttpResponse('sucess')
+                 
          else:
              return HttpResponse('not sucess')
     else:
@@ -92,3 +94,7 @@ def my_logout(request):
     logout(request)
     return render(request,'homeapp/index.html')
 
+# def send_useremail(request):
+#     send_mail('Welcome to our Shop', 
+#     'this is a welcome message','varunandpython@gmail.com',
+#     ['90.varunkrishna@gmail.com'],fail_silently=False)

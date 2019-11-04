@@ -83,38 +83,38 @@
 						</nav>
 				    </div>
 				</nav>
-
-				<form action="#" method="post">
+                <form action="productapp/search">
+                    {% csrf_token %}
                      <select
       aria-describedby="searchDropdownDescription"
       class="nav-search-dropdown searchSelect"
       data-nav-digest="R0Y6PpUvJhgOTk4cZYLpBnPuc6o="
       data-nav-selected="0"
       id="searchDropdownBox"
-      name="url"
+      name="pcat"
       style="display: block;"
       tabindex="8"
       title="Search in"
     >
         <option selected="selected" value="search-alias=aps">All Categories</option>
-        <option value="search-alias=alexa-skills">Alexa Skills</option>
-        <option value="search-alias=amazon-devices">Amazon Devices</option>
-        <option value="search-alias=fashion">Amazon Fashion</option>
-        <option value="search-alias=nowstore">Amazon Fresh</option>
-        <option value="search-alias=amazon-global-store">Amazon Global Store</option>
-        <option value="search-alias=pantry">Amazon Pantry</option>
+        <!-- <option value="search-alias=alexa-skills">Alexa Skills</option> -->
+        <!-- <option value="search-alias=amazon-devices">Amazon Devices</option> -->
+        <!-- <option value="search-alias=fashion">Amazon Fashion</option> -->
+        <!-- <option value="search-alias=nowstore">Amazon Fresh</option> -->
+        <!-- <option value="search-alias=amazon-global-store">Amazon Global Store</option> -->
+        <!-- <option value="search-alias=pantry">Amazon Pantry</option> -->
         <option value="search-alias=appliances">Appliances</option>
-        <option value="search-alias=mobile-apps">Apps & Games</option>
+        <!-- <option value="search-alias=mobile-apps">Apps & Games</option> -->
         <option value="search-alias=baby">Baby</option>
         <option value="search-alias=beauty">Beauty</option>
         <option value="search-alias=stripbooks">Books</option>
-        <option value="search-alias=automotive">Car & Motorbike</option>
+        <!-- <option value="search-alias=automotive">Car & Motorbike</option> -->
         <option value="search-alias=apparel">Clothing & Accessories</option>
         <option value="search-alias=collectibles">Collectibles</option>
         <option value="search-alias=computers">Computers & Accessories</option>
-        <option value="search-alias=electronics">Electronics</option>
+        <option value="Electronics">Electronics</option>
         <option value="search-alias=furniture">Furniture</option>
-        <option value="search-alias=lawngarden">Garden & Outdoors</option>
+    <!--     <option value="search-alias=lawngarden">Garden & Outdoors</option>
         <option value="search-alias=gift-cards">Gift Cards</option>
         <option value="search-alias=grocery">Grocery & Gourmet Foods</option>
         <option value="search-alias=hpc">Health & Personal Care</option>
@@ -135,11 +135,12 @@
         <option value="search-alias=sporting">Sports, Fitness & Outdoors</option>
         <option value="search-alias=home-improvement">Tools & Home Improvement</option>
         <option value="search-alias=toys">Toys & Games</option>
-        <option value="search-alias=videogames">Video Games</option>
+        <option value="search-alias=videogames">Video Games</option> -->
         <option value="search-alias=watches">Watches</option>
     </select>
-					<input type="text" placeholder="Search....">
+					<input type="text" name="pname" placeholder="Search....">
 					<input type="submit" value="Search">
+                   
 				</form>
 			</div>
             <ul class="slider">
