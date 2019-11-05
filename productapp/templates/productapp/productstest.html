@@ -1,0 +1,49 @@
+{% extends "homeapp/index.html" %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    table, th, td {
+    border: 1px solid black;
+                  }
+    </style>
+</head>
+<body>
+    <form action="/productapp/search">
+    <!-- <body bgcolor="grey"> -->
+    <table style="background-color:#00FF00">
+    	<tr>
+    		<th>pid </th>
+            <th>pcat </th>
+            <th>pname</th>            
+    		<th>pcost</th>
+    		<th>pmfdt</th>
+    		<th>pexpt</th>
+    	</tr>
+
+    	{% for ref in resc %}
+        
+    	<tr>
+    		<td>{{ ref.pid   }}</td>
+            <td>{{ ref.pcat  }}</td>
+            <td>{{ ref.pname }}</td>    		
+    		<td>{{ ref.pcost }}</td>
+    		<td>{{ ref.pmfdt }}</td>
+    		<td>{{ ref.pexpt }}</td>
+            <td><a href="/cartapp/addcart?pid={{ref.pid}}">add to cart</a></td>
+    	</tr>
+
+        {% endfor %}
+
+    </table>
+</form>
+</body>
+</html>
+
+{% endblock %}

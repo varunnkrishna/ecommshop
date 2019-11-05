@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form
+    action="http://localhost:8000/>cart/addcart">
+    pid:<input type="text"  value={{ pid }} name="pid"><br>
+	enter quantity:<select name="qt">
+    {%  for rec in qtt %}
+    <option  value={{ rec }}>{{ rec }}</option>
+    {% endfor %}
+</select><br>
+<input type="submit" value="add">
+</form>
+</body>
+</html>
