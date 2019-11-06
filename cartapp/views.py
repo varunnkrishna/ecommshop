@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from productapp.models import Stock
+from productapp.models import Stock, Product, Cart
+from django.contrib.auth.models import User
+
 
 
 # Create your views here.
@@ -17,11 +19,13 @@ def cartapp(request):
 	return render(request,'cartapp/cart.html',{"pid":x,"qtt":qt})
 
 def insertcart(request):
-	x = request.GET("pid")
-	qt= request.GET("qt")
-	user= User.objects.GET(id=request.session.get("_auth_user_id"))
+	x = request.GET["pid"]
+	qt= request.GET["qt"]
+	print('getting pid ')
+	user= User.objects.get(id=request.session.get("_auth_user_id"))
 	un= str(user.username)
 	pr=Product.objects.get(pid=int(x))
+	print('hope for the best')
 	a= int(str(x))
 	b= int(str(qt))
 	c= un
@@ -29,4 +33,5 @@ def insertcart(request):
 	e= int(str(qt)) * float(pr.pcost)
 	ct= Cart(username=c, pid=a, units=b, unitprice=d, tuprice=e)
 	ct.save()
-	return render(request, 'insertcart.html')
+	print('insert cart sucessfull2')
+	return render(request, 'cartapp/insertcart.html')
