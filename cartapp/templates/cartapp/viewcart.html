@@ -1,0 +1,48 @@
+{% extends "homeapp/index.html" %}
+
+{% block viewcart %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    table, th, td {
+    border: 1px solid black;
+                  }
+    </style>
+</head>
+    
+<h1><body><table border="1" style="background-color: #ccffff">
+    <tr>
+        <th>username</th>
+        <th>pid</th>
+        <th>units</th>
+        <th>unitprice</th>
+        <th>tuprice</th>
+    </tr>
+
+    {% for rec in x %}
+    <tr>
+        <td>{{ rec.username }}</td>
+        <td>{{ rec.pid }}</td>
+        <td>{{ rec.units }}</td>
+        <td>{{ rec.unitprice }}</td>
+        <td>{{ rec.tuprice }}</td>
+        <td><button style="background-color:darkred">
+        <a href="/cartapp/delete?id={{ rec.id }}">Delete</a></button></td>
+        <td><button><a href="/cartapp/modifycart?id={{ rec.id }}&pid={{ rec.pid }}&oqt={{ rec.units }}">Modify qty</a> </button></td>
+        <td><button><a href="http://127.0.0.1:8000/cartapp/order?id={{ rec.id }}&tup={{ tp }}">Checkout</a> </button></td>
+        <td><a href="http://127.0.0.1:8000/"></a></td>
+        </tr>
+
+    {% endfor %}
+
+    </table>
+</form>
+</body>
+</html>
+
+{% endblock %}

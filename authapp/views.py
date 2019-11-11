@@ -81,8 +81,10 @@ def login(request):
          pwd = request.POST['pwd']
          user = authenticate(username=uname, password=pwd)
          if user is not None: 
-                #  send_useremail(request)            
-                 return HttpResponse('sucess')
+                #  send_useremail(request)  
+                # return HttpResponse(request.user.is_authenticated)
+                auth.login(request, user)          
+                return render(request, 'homeapp/index.html')
                  
          else:
              return HttpResponse('not sucess')
@@ -90,8 +92,9 @@ def login(request):
         return render(request, 'authapp/signin.html')
     #   return render(request,'homeapp/price.html')
 
-def my_logout(request):
-    logout(request)
+def logout(request):
+    auth.logout(request)
+    # logout(request)
     return render(request,'homeapp/index.html')
 
 # def send_useremail(request):
