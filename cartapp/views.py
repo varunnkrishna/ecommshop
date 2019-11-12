@@ -34,6 +34,8 @@ def insertcart(request):
 	ct= Cart(username=c, pid=a, units=b, unitprice=d, tuprice=e)
 	ct.save()
 	print('insert cart sucessfull2')
+    
+
 	return render(request, 'cartapp/insertcart.html')
 
 
@@ -47,6 +49,8 @@ def delete(request):
 	# return HttpResponse('delete item')
     cs=Cart.objects.filter(id=int(request.GET["id"]))
     cs.delete()
+
+
     return render(request,'cartapp/viewcart.html',{'x': display(request)})
 
 def display (request):

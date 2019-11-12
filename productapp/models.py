@@ -14,6 +14,7 @@ class Product(models.Model):
 
 class Stock(models.Model):
     prodid = models.OneToOneField(Product, on_delete=models.CASCADE, primary_key = True)
+    # CASCADE: When the referenced object is deleted, also delete the objects that have references to it
     #pcat = models.OneToOneField(Product, on_delete=models.CASCADE, primary_key = True)
     tot_qty = models.IntegerField()
     last_update = models.DateField()
